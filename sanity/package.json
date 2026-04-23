@@ -1,0 +1,21 @@
+{
+  "name": "bd-jedlova-studio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev":    "sanity dev",
+    "build":  "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "dependencies": {
+    "react":              "^18.3.1",
+    "react-dom":          "^18.3.1",
+    "sanity":             "3.65.0",
+    "@sanity/vision":     "3.65.0",
+    "styled-components":  "^6.1.15"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "typescript":   "^5.4.5"
+  }
+}

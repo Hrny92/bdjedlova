@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-serif: "Old Standard TT", Georgia, serif;
+    --font-inter: "Inter", "Helvetica Neue", sans-serif;
+  }
+
+  html {
+    scroll-behavior: auto; /* GSAP přebírá scroll */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-anthracite font-sans overflow-x-hidden;
+  }
+
+  ::selection {
+    @apply bg-brick/15 text-brick-dark;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { @apply bg-cream; }
+  ::-webkit-scrollbar-thumb { @apply bg-anthracite/30 rounded-full; }
+}
+
+@layer components {
+  /* ── Typografie ── */
+  .heading-xl {
+    @apply font-serif font-normal text-[clamp(3rem,7vw,7rem)] leading-[1.02] tracking-[-0.01em];
+  }
+  .heading-lg {
+    @apply font-serif font-normal text-[clamp(2rem,4vw,4.5rem)] leading-[1.05] tracking-[-0.005em];
+  }
+  .heading-md {
+    @apply font-serif font-normal text-[clamp(1.6rem,2.5vw,3rem)] leading-[1.1] tracking-[0em];
+  }
+  .label {
+    @apply font-sans text-[0.68rem] tracking-[0.32em] uppercase;
+  }
+  .body-sm {
+    @apply font-sans text-[0.9rem] leading-[1.85];
+  }
+
+  /* ── Tlačítka ── */
+  .btn-outline-dark {
+    @apply inline-flex items-center gap-3 font-sans text-[0.7rem] tracking-[0.22em] uppercase
+           px-7 py-3.5 border border-anthracite/25 text-anthracite
+           transition-all duration-400 hover:border-brick hover:text-brick;
+  }
+  .btn-outline-light {
+    @apply inline-flex items-center gap-3 font-sans text-[0.7rem] tracking-[0.22em] uppercase
+           px-7 py-3.5 border border-white/25 text-white
+           transition-all duration-400 hover:border-brick-muted hover:text-brick-muted;
+  }
+  .btn-filled {
+    @apply inline-flex items-center gap-3 font-sans text-[0.7rem] tracking-[0.22em] uppercase
+           px-8 py-4 bg-brick text-white
+           transition-all duration-400 hover:bg-brick-dark;
+  }
+
+  /* ── Dělící čára ── */
+  .divider {
+    @apply w-12 h-px bg-brick;
+  }
+}
+
+/* ── Scroll hint animace ── */
+@keyframes scrollHintLine {
+  0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
+  40%  { opacity: 1; }
+  100% { transform: scaleY(1); transform-origin: top; opacity: 0; }
+}
+.scroll-hint-line { animation: scrollHintLine 2s ease-in-out infinite; }
+
+/* ── GSAP počáteční stavy (aby nedošlo k záblesku) ── */
+.gsap-init-hidden { opacity: 0; }
