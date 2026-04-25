@@ -88,6 +88,16 @@ export default function CookieBanner() {
     }
   }, []);
 
+  // Poslouchej event z patičky — otevři rovnou nastavení
+  useEffect(() => {
+    const onOpen = () => {
+      setVisible(true);
+      setShowDetail(true);
+    };
+    window.addEventListener("openCookieSettings", onOpen);
+    return () => window.removeEventListener("openCookieSettings", onOpen);
+  }, []);
+
   const acceptAll = () => {
     const c: Consent = { necessary: true, analytics: true, marketing: true };
     saveConsent(c);

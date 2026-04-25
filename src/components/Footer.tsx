@@ -85,8 +85,7 @@ export default function Footer() {
             </Link>
             <button
               onClick={() => {
-                try { localStorage.removeItem("bdjjedlova_cookie_consent"); } catch {}
-                window.location.reload();
+                window.dispatchEvent(new CustomEvent("openCookieSettings"));
               }}
               className="font-sans text-[0.68rem] text-white/25 hover:text-brick
                          transition-colors duration-300 tracking-wide"

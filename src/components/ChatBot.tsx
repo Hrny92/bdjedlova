@@ -203,7 +203,7 @@ export default function ChatBot() {
               onKeyDown={onKey}
               disabled={loading}
               placeholder="Napište dotaz…"
-              className="flex-1 font-sans text-sm text-anthracite placeholder:text-anthracite/30
+              className="flex-1 font-sans text-[16px] md:text-sm text-anthracite placeholder:text-anthracite/30
                          bg-transparent focus:outline-none"
             />
             <button
