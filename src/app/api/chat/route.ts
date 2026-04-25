@@ -107,7 +107,7 @@ DŮLEŽITÉ: Ceny a dostupnost bytů vždy beri VÝHRADNĚ z výše uvedené tab
 
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
-      model: process.env.GEMINI_MODEL ?? "gemini-2.0-flash",
+      model: "gemini-3-flash-preview",
       systemInstruction,
     });
 
@@ -128,7 +128,8 @@ DŮLEŽITÉ: Ceny a dostupnost bytů vždy beri VÝHRADNĚ z výše uvedené tab
 
     return NextResponse.json({ text });
   } catch (err) {
-    console.error("[/api/chat]", err);
-    return NextResponse.json({ error: "Chyba serveru." }, { status: 500 });
+    const msg = err instanceof Error ? err.message : String(err);
+    console.error("[/api/chat]", msg);
+    return NextResponse.json({ error: "Chyba serveru.", detail: msg }, { status: 500 });
   }
 }
