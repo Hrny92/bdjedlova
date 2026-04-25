@@ -173,17 +173,18 @@ export default function GallerySection() {
                 quality={85}
               />
               {/* Tmavý overlay s tlačítkem */}
-              <div className="absolute inset-0 bg-anthracite/55 flex flex-col items-center justify-center gap-4">
+              <div className="absolute inset-0 bg-anthracite/55 flex flex-col items-center justify-center gap-3 px-4">
                 <button
                   onClick={(e) => { e.stopPropagation(); setLightboxIndex(0); }}
-                  className="font-sans text-[0.68rem] tracking-[0.2em] uppercase
-                             text-white border border-white/50 px-6 py-3
+                  className="font-sans text-[0.6rem] md:text-[0.68rem] tracking-[0.15em] md:tracking-[0.2em] uppercase
+                             text-white border border-white/50 px-3 py-2.5 md:px-6 md:py-3
+                             w-full max-w-[180px] text-center
                              hover:bg-white hover:text-anthracite
                              transition-all duration-300"
                 >
-                  Zobrazit všechny fotografie
+                  Zobrazit fotografie
                 </button>
-                <span className="label text-white/40">{images.length} vizualizací</span>
+                <span className="label text-white/40 text-[0.55rem] md:text-[0.68rem]">{images.length} vizualizací</span>
               </div>
             </div>
 

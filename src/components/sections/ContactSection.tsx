@@ -17,11 +17,99 @@ const apartments = [
   "Obecný dotaz",
 ];
 
+const agents = [
+  {
+    name:  "Ing. Zuzana\nBenedyktová",
+    title: "Realitní makléřka",
+    phone: "+420 723 117 023",
+    email: "info@jedlova-plzen.cz",
+    photo: "/images/zuzana.webp",
+  },
+  {
+    name:  "Milada\nIndráková",
+    title: "Realitní makléřka",
+    phone: "+420 XXX XXX XXX",   // ← doplň číslo
+    email: "info@jedlova-plzen.cz",
+    photo: "/images/milada.webp",
+  },
+];
+
+// ── Ikony ────────────────────────────────────────────────────────────────────
+function PhoneIcon() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 13 13" fill="none" stroke="currentColor"
+         strokeWidth="1.3" strokeLinecap="round" className="text-brick shrink-0">
+      <path d="M12 9.5c0 .3-.1.6-.2.9-.1.3-.3.5-.5.7-.4.4-.8.5-1.3.5-.3 0-.7-.1-1-.2-1-.3-1.9-.9-2.7-1.6C5.5 9 4.7 8 4 6.9 3.3 5.8 2.8 4.7 2.5 3.6c-.1-.4-.2-.7-.2-1 0-.5.1-.9.4-1.3.3-.4.7-.6 1.1-.6.2 0 .3 0 .5.1.2.1.3.2.4.4L6 3.4c.1.2.2.3.2.5 0 .2-.1.3-.2.4L5.4 5c-.1.1-.1.2-.1.3 0 .1 0 .2.1.3.3.5.6 1 1 1.4.4.4.9.8 1.4 1.1.1.1.2.1.3.1.1 0 .2-.1.3-.2l.6-.6c.1-.1.3-.2.4-.2.2 0 .3.1.5.2l2.2 1.3c.2.1.3.3.3.5.1.1.1.2.1.3z"/>
+    </svg>
+  );
+}
+
+function MailIcon() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 13 13" fill="none" stroke="currentColor"
+         strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"
+         className="text-brick shrink-0">
+      <rect x="1" y="2.5" width="11" height="8" rx="1"/>
+      <polyline points="1,2.5 6.5,7.5 12,2.5"/>
+    </svg>
+  );
+}
+
+// ── Karta makléřky — foto vlevo, text vpravo ─────────────────────────────────
+function AgentCard({ agent }: { agent: typeof agents[number] }) {
+  return (
+    <div className="bg-cream-dark flex overflow-hidden" style={{ minHeight: "18rem" }}>
+
+      {/* Foto — zarovnané ke spodku */}
+      <div className=" relative w-44 md:w-52 shrink-0 self-end" style={{ height: "17rem" }}>
+        <Image
+          src={agent.photo}
+          alt={agent.name.replace("\n", " ")}
+          fill
+          className="object-cover object-bottom"
+          sizes="(max-width: 768px) 176px, 208px"
+        />
+      </div>
+
+      {/* Text */}
+      <div className="flex flex-col justify-center py-2 pr-5 pl-4 sm:pr-7 sm:pl-5 min-w-0">
+        <p className="label text-brick mb-2">Realitní makléřka</p>
+        <p className="font-serif text-[1rem] sm:text-[1.1rem] text-anthracite leading-snug">
+          {agent.name.split("\n").map((line, i) => (
+            <span key={i}>{line}{i === 0 && <br />}</span>
+          ))}
+        </p>
+        <div className="w-5 h-px bg-brick/30 my-3 sm:my-4" />
+        <div className="space-y-2.5">
+          <a href={`tel:${agent.phone.replace(/\s/g, "")}`}
+             className="flex items-center gap-2 group">
+            <PhoneIcon />
+            <span className="font-sans text-[0.75rem] sm:text-[0.78rem] text-anthracite/65
+                             group-hover:text-brick transition-colors duration-300">
+              {agent.phone}
+            </span>
+          </a>
+          <a href={`mailto:${agent.email}`}
+             className="flex items-center gap-2 group">
+            <MailIcon />
+            <span className="font-sans text-[0.72rem] sm:text-[0.76rem] text-anthracite/65
+                             group-hover:text-brick transition-colors duration-300 break-all">
+              {agent.email}
+            </span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  );
+}
+
+// ── Hlavní sekce ──────────────────────────────────────────────────────────────
 export default function ContactSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const leftRef    = useRef<HTMLDivElement>(null);
   const formRef    = useRef<HTMLFormElement>(null);
-  const [sent, setSent]   = useState(false);
+  const [sent, setSent]     = useState(false);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -42,7 +130,6 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // TODO: zapojit API endpoint / EmailJS / Resend
     await new Promise((r) => setTimeout(r, 1200));
     setLoading(false);
     setSent(true);
@@ -56,7 +143,7 @@ export default function ContactSection() {
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
 
-        {/* Levý sloupec */}
+        {/* ── Levý sloupec ── */}
         <div ref={leftRef}>
           <p className="label text-brick mb-6">Kontakt</p>
           <h2 className="heading-lg text-anthracite mb-10">
@@ -64,68 +151,15 @@ export default function ContactSection() {
             Napište nám.
           </h2>
           <div className="divider mb-8" />
-          <p className="body-sm text-anthracite/60 max-w-[64ch] mb-12">
+          <p className="body-sm text-anthracite/60 max-w-[40ch] mb-12">
             BD Jedlová nabízí pouze 8 bytových jednotek. Pokud vás projekt zaujal,
             doporučujeme kontaktovat nás co nejdříve — zájem o prémiové bydlení
             v centru Plzně je vysoký.
           </p>
 
-          {/* Kontaktní osoba */}
-          {/* Kontaktní karta — foto absolute, přesahuje nahoře přes rámeček o 10 % */}
-          <div className="relative mt-2">
-            {/* Karta — pevná výška pro fungující height: 110% na absolutním dítěti */}
-            <div className="relative bg-cream-dark overflow-visible" style={{ height: "15rem" }}>
-
-              {/* Fotka — absolute, ukotvena ke spodku, výška 110 % = přesah nahoře.
-                  Šířka w-64 > výška kontejneru → image je height-constrained → plná výška */}
-              <div
-                className="absolute left-0 bottom-0 w-64"
-                style={{ height: "110%" }}
-              >
-                <Image
-                  src="/images/zuzana.webp"
-                  alt="Ing. Zuzana Benedyktová"
-                  fill
-                  className="object-contain object-bottom"
-                  sizes="256px"
-                />
-              </div>
-
-              {/* Text — odsazen zleva o šířku fotky + mezera */}
-              <div className="absolute inset-0 flex flex-col justify-center pl-[calc(16rem+1rem)] pr-7">
-                <p className="label text-brick mb-3">Prodej zajišťuje</p>
-                <p className="font-serif text-xl text-anthracite leading-snug">
-                  Ing. Zuzana<br />Benedyktová
-                </p>
-                <p className="label text-anthracite/40 mt-1.5 mb-6">Realitní makléřka</p>
-                <div className="space-y-3">
-                  <a href="tel:+420723117023" className="flex items-center gap-2.5 group">
-                    <svg width="12" height="12" viewBox="0 0 13 13" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"
-                         className="text-brick shrink-0">
-                      <path d="M12 9.5c0 .3-.1.6-.2.9-.1.3-.3.5-.5.7-.4.4-.8.5-1.3.5-.3 0-.7-.1-1-.2-1-.3-1.9-.9-2.7-1.6C5.5 9 4.7 8 4 6.9 3.3 5.8 2.8 4.7 2.5 3.6c-.1-.4-.2-.7-.2-1 0-.5.1-.9.4-1.3.3-.4.7-.6 1.1-.6.2 0 .3 0 .5.1.2.1.3.2.4.4L6 3.4c.1.2.2.3.2.5 0 .2-.1.3-.2.4L5.4 5c-.1.1-.1.2-.1.3 0 .1 0 .2.1.3.3.5.6 1 1 1.4.4.4.9.8 1.4 1.1.1.1.2.1.3.1.1 0 .2-.1.3-.2l.6-.6c.1-.1.3-.2.4-.2.2 0 .3.1.5.2l2.2 1.3c.2.1.3.3.3.5.1.1.1.2.1.3z"/>
-                    </svg>
-                    <span className="font-sans text-[0.82rem] text-anthracite/70 group-hover:text-brick transition-colors duration-300">
-                      +420 723 117 023
-                    </span>
-                  </a>
-                  <a href="mailto:info@jedlova-plzen.cz" className="flex items-center gap-2.5 group">
-                    <svg width="12" height="12" viewBox="0 0 13 13" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"
-                         className="text-brick shrink-0">
-                      <rect x="1" y="2.5" width="11" height="8" rx="1"/>
-                      <polyline points="1,2.5 6.5,7.5 12,2.5"/>
-                    </svg>
-                    <span className="font-sans text-[0.82rem] text-anthracite/70 group-hover:text-brick transition-colors duration-300">
-                      info@jedlova-plzen.cz
-                    </span>
-                  </a>
-                </div>
-              </div>
-
-            </div>
-          </div>
         </div>
 
-        {/* Pravý sloupec — formulář */}
+        {/* ── Pravý sloupec — formulář ── */}
         <div>
           {sent ? (
             <div className="flex flex-col items-start justify-center h-full gap-6">
@@ -231,6 +265,14 @@ export default function ContactSection() {
         </div>
 
       </div>
+
+      {/* ── Karty makléřek — plná šířka pod oběma sloupci ── */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-12 md:mt-16">
+        {agents.map((a) => (
+          <AgentCard key={a.name} agent={a} />
+        ))}
+      </div>
+
     </section>
   );
 }

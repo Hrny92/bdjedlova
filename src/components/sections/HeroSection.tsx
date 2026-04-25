@@ -149,14 +149,14 @@ export default function HeroSection() {
         className="absolute inset-0 z-10 bg-cream grid grid-cols-1 md:grid-cols-2"
       >
         {/* Levý panel */}
-        <div className="flex flex-col justify-center px-10 md:px-16 lg:px-24 py-20
+        <div className="flex flex-col justify-center px-6 py-8 md:px-16 md:py-20 lg:px-24
                         border-b md:border-b-0 md:border-r border-anthracite/10">
-          <p className="label text-brick mb-8">O projektu</p>
-          <h2 className="heading-lg text-anthracite mb-8">
+          <p className="label text-brick mb-4 md:mb-8">O projektu</p>
+          <h2 className="heading-lg text-anthracite mb-4 md:mb-8">
             Bydlení<br />s charakterem.
           </h2>
-          <div className="divider mb-8" />
-          <p className="body-sm text-anthracite/60 max-w-[36ch] mb-10">
+          <div className="divider mb-4 md:mb-8" />
+          <p className="body-sm text-anthracite/60 max-w-[36ch] mb-6 md:mb-10 text-[0.82rem] md:text-[0.9rem]">
             BD Jedlová uzavírá historickou proluku v centru Plzně. Čtyři podlaží,
             osm bytů, výrazná fasáda z tmavé lícové cihly a dřevěných lamel.
             Architektura, která ví, kde stojí.
@@ -173,9 +173,9 @@ export default function HeroSection() {
         </div>
 
         {/* Pravý panel — stats */}
-        <div className="flex flex-col justify-center px-10 md:px-16 lg:px-24 py-20">
-          <p className="label text-anthracite/35 mb-10">Projekt v číslech</p>
-          <div className="grid grid-cols-2 gap-y-12 gap-x-8">
+        <div className="flex flex-col justify-center px-6 py-8 md:px-16 md:py-20 lg:px-24">
+          <p className="label text-anthracite/35 mb-6 md:mb-10">Projekt v číslech</p>
+          <div className="grid grid-cols-2 gap-y-6 gap-x-8 md:gap-y-12">
             {[
               { value: "8",      label: "Bytových jednotek" },
               { value: "4",      label: "Nadzemní podlaží"  },
@@ -183,11 +183,11 @@ export default function HeroSection() {
               { value: "100 m²", label: "Největší byt"      },
             ].map(({ value, label }) => (
               <div key={label}>
-                <div className="font-serif font-light text-[clamp(2.5rem,5vw,4.5rem)]
+                <div className="font-serif font-light text-[clamp(2rem,5vw,4.5rem)]
                                 leading-none text-anthracite tracking-[-0.02em]">
                   {value}
                 </div>
-                <div className="label text-anthracite/35 mt-2">{label}</div>
+                <div className="label text-anthracite/35 mt-1 md:mt-2">{label}</div>
               </div>
             ))}
           </div>
