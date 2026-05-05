@@ -19,6 +19,10 @@ const BASE_URL = "https://jedlova-plzen.cz";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
 
+  verification: {
+    google: "uOHFzOPUWseplKllKNje4TG7fDgRtPOv-1IfalGVId0",
+  },
+
   title: {
     default: "BD Jedlová — Prémiové bydlení v centru Plzně",
     template: "%s | BD Jedlová Plzeň",
