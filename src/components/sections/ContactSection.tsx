@@ -109,8 +109,14 @@ export default function ContactSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const leftRef    = useRef<HTMLDivElement>(null);
   const formRef    = useRef<HTMLFormElement>(null);
-  const [sent, setSent]     = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [sent, setSent]         = useState(false);
+  const [loading, setLoading]   = useState(false);
+  const [error, setError]       = useState("");
+  const [name, setName]         = useState("");
+  const [phone, setPhone]       = useState("");
+  const [email, setEmail]       = useState("");
+  const [apartment, setApartment] = useState("");
+  const [message, setMessage]   = useState("");
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -130,9 +136,20 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSent(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone, email, apartment, message }),
+      });
+      if (!res.ok) throw new Error("server");
+      setSent(true);
+    } catch {
+      setError("Nepodařilo se odeslat zprávu. Zkuste to prosím znovu nebo nás kontaktujte přímo na +420 723 117 023.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -181,6 +198,7 @@ export default function ContactSection() {
                 <label className="label text-anthracite/50 block mb-2">Jméno a příjmení *</label>
                 <input
                   type="text" required
+                  value={name} onChange={e => setName(e.target.value)}
                   className="w-full bg-white border border-anthracite/15 px-4 py-3.5
                              font-sans text-sm text-anthracite placeholder:text-anthracite/30
                              focus:outline-none focus:border-brick transition-colors duration-300"
@@ -194,6 +212,7 @@ export default function ContactSection() {
                   <label className="label text-anthracite/50 block mb-2">Telefon *</label>
                   <input
                     type="tel" required
+                    value={phone} onChange={e => setPhone(e.target.value)}
                     className="w-full bg-white border border-anthracite/15 px-4 py-3.5
                                font-sans text-sm text-anthracite placeholder:text-anthracite/30
                                focus:outline-none focus:border-brick transition-colors duration-300"
@@ -204,6 +223,7 @@ export default function ContactSection() {
                   <label className="label text-anthracite/50 block mb-2">E-mail *</label>
                   <input
                     type="email" required
+                    value={email} onChange={e => setEmail(e.target.value)}
                     className="w-full bg-white border border-anthracite/15 px-4 py-3.5
                                font-sans text-sm text-anthracite placeholder:text-anthracite/30
                                focus:outline-none focus:border-brick transition-colors duration-300"
@@ -216,6 +236,7 @@ export default function ContactSection() {
               <div>
                 <label className="label text-anthracite/50 block mb-2">Mám zájem o</label>
                 <select
+                  value={apartment} onChange={e => setApartment(e.target.value)}
                   className="w-full bg-white border border-anthracite/15 px-4 py-3.5
                              font-sans text-sm text-anthracite
                              focus:outline-none focus:border-brick transition-colors duration-300
@@ -233,6 +254,7 @@ export default function ContactSection() {
                 <label className="label text-anthracite/50 block mb-2">Zpráva</label>
                 <textarea
                   rows={4}
+                  value={message} onChange={e => setMessage(e.target.value)}
                   className="w-full bg-white border border-anthracite/15 px-4 py-3.5
                              font-sans text-sm text-anthracite placeholder:text-anthracite/30
                              focus:outline-none focus:border-brick transition-colors duration-300
@@ -249,6 +271,11 @@ export default function ContactSection() {
                   Souhlasím se zpracováním osobních údajů pro účely odpovědi na tento dotaz.
                 </span>
               </label>
+
+              {/* Chyba */}
+              {error && (
+                <p className="font-sans text-[0.78rem] text-red-600 leading-relaxed">{error}</p>
+              )}
 
               {/* Submit */}
               <button
