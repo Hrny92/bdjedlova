@@ -82,7 +82,11 @@ export default function SEOSchema() {
         jobTitle: "Realitní makléřka",
       },
     ],
-    sameAs: [],
+    sameAs: [
+      "https://bytyjedlova.cz",
+      "https://www.bytyjedlova.cz",
+      "https://www.jedlova-plzen.cz",
+    ],
   };
 
   // ── 3. LocalBusiness ─────────────────────────────────────────────────────────

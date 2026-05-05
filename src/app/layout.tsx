@@ -51,6 +51,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BASE_URL,
     languages: { "cs-CZ": BASE_URL },
+    // bytyjedlova.cz je alias — canonical vždy ukazuje na jedlova-plzen.cz
   },
 
   openGraph: {
