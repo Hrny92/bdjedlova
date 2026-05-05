@@ -25,14 +25,14 @@ type Apartment = {
 
 // ── Lokální fallback data ──────────────────────────────────────────────────────
 const localApartments: Apartment[] = [
-  { id: 1, type: "3+kk",         floor: "2. NP", floorNum: 2, area: 59.86,  terrace: null,  tag: null,            price: "7 999 999 Kč", status: "Volný" },
-  { id: 2, type: "1+kk",         floor: "2. NP", floorNum: 2, area: 50.64,  terrace: 8.12,  tag: "Terasa",        price: "7 999 999 Kč", status: "Volný" },
-  { id: 3, type: "1+kk",         floor: "2. NP", floorNum: 2, area: 54.03,  terrace: 25.81, tag: "Velká terasa",  price: "7 999 999 Kč", status: "Volný" },
-  { id: 4, type: "3+kk",         floor: "3. NP", floorNum: 3, area: 59.86,  terrace: null,  tag: null,            price: "7 999 999 Kč", status: "Volný" },
-  { id: 5, type: "1+kk",         floor: "3. NP", floorNum: 3, area: 50.64,  terrace: 8.12,  tag: "Terasa",        price: "7 999 999 Kč", status: "Volný" },
-  { id: 6, type: "1+kk kompakt", floor: "3. NP", floorNum: 3, area: 28.23,  terrace: null,  tag: "Investice",     price: "7 999 999 Kč", status: "Volný" },
-  { id: 7, type: "1+kk",         floor: "4. NP", floorNum: 4, area: 29.53,  terrace: null,  tag: null,            price: "7 999 999 Kč", status: "Volný" },
-  { id: 8, type: "3+kk",         floor: "4. NP", floorNum: 4, area: 100.38, terrace: 28.25, tag: "Penthouse",     price: "7 999 999 Kč", status: "Volný" },
+  { id: 1, type: "3+kk",         floor: "2. NP", floorNum: 2, area: 59.86,  terrace: null,  tag: null,            price: "7 480 000 Kč",  status: "Volný" },
+  { id: 2, type: "1+kk",         floor: "2. NP", floorNum: 2, area: 50.64,  terrace: 8.12,  tag: "Terasa",        price: "6 330 000 Kč",  status: "Volný" },
+  { id: 3, type: "1+kk",         floor: "2. NP", floorNum: 2, area: 54.03,  terrace: 25.81, tag: "Velká terasa",  price: "6 750 000 Kč",  status: "Volný" },
+  { id: 4, type: "3+kk",         floor: "3. NP", floorNum: 3, area: 59.86,  terrace: null,  tag: null,            price: "7 480 000 Kč",  status: "Volný" },
+  { id: 5, type: "1+kk",         floor: "3. NP", floorNum: 3, area: 50.64,  terrace: 8.12,  tag: "Terasa",        price: "6 330 000 Kč",  status: "Volný" },
+  { id: 6, type: "1+kk kompakt", floor: "3. NP", floorNum: 3, area: 28.23,  terrace: null,  tag: "Investice",     price: "3 530 000 Kč",  status: "Volný" },
+  { id: 7, type: "1+kk",         floor: "4. NP", floorNum: 4, area: 29.53,  terrace: null,  tag: null,            price: "3 690 000 Kč",  status: "Volný" },
+  { id: 8, type: "3+kk",         floor: "4. NP", floorNum: 4, area: 100.38, terrace: 28.25, tag: "Penthouse",     price: "12 550 000 Kč", status: "Volný" },
 ];
 
 // ── SVG zóny podlaží ───────────────────────────────────────────────────────────

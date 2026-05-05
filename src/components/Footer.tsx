@@ -2,7 +2,7 @@
 
 import Link  from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const footerLinks = [
   { label: "O projektu",   href: "#o-projektu"  },
@@ -14,11 +14,15 @@ const footerLinks = [
 ];
 
 export default function Footer() {
-  const year = new Date().getFullYear();
+  const year     = new Date().getFullYear();
+  const pathname = usePathname();
+  const isHome   = pathname === "/";
 
-  const handleAnchor = (href: string) => {
-    if (href.startsWith("#")) {
-      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+  const handleAnchor = (hash: string) => {
+    if (isHome) {
+      document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = `/${hash}`;
     }
   };
 

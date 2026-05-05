@@ -33,7 +33,7 @@ type SanityApartment = {
 const localApartments = [
   {
     id: 1, type: "3+kk", floor: "2. NP", floorNum: 2, area: 59.86, terrace: null,
-    tag: null, price: "7 999 999 Kč", status: "Volný",
+    tag: null, price: "7 480 000 Kč", status: "Volný",
     description: "Prostorný byt 3+kk ve druhém nadzemním podlaží. Dispozice nabízí oddělené pokoje s přirozeným osvětlením, plně vybavenou kuchyni s obývacím prostorem a koupelnu s WC. Součástí bytu je sklepní kója a parkovací místo v krytém parkovišti.",
     features: ["Sklepní kója", "Parkovací místo", "Koupelna s WC", "Šatna"],
     photos: [1,2,3,4,5,7,8,9,10],
@@ -41,7 +41,7 @@ const localApartments = [
   },
   {
     id: 2, type: "1+kk", floor: "2. NP", floorNum: 2, area: 50.64, terrace: 8.12,
-    tag: "Terasa", price: "7 999 999 Kč", status: "Volný",
+    tag: "Terasa", price: "6 330 000 Kč", status: "Volný",
     description: "Vzdušný byt 1+kk s terasou 8 m² ve druhém nadzemním podlaží. Terasa navazuje přímo na obývací prostor s kuchyní a nabízí výhled do klidného zátiší. Ideální pro páry nebo investici.",
     features: ["Terasa 8 m²", "Sklepní kója", "Parkovací místo", "Koupelna s WC"],
     photos: [1,2,3,4,5,6,7],
@@ -49,7 +49,7 @@ const localApartments = [
   },
   {
     id: 3, type: "1+kk", floor: "2. NP", floorNum: 2, area: 54.03, terrace: 25.81,
-    tag: "Velká terasa", price: "7 999 999 Kč", status: "Volný",
+    tag: "Velká terasa", price: "6 750 000 Kč", status: "Volný",
     description: "Výjimečný byt 1+kk s rozsáhlou terasou 25,8 m² — největší na celém 2. NP. Terasa umožňuje venkovní sezení, pěstování zeleně i soukromé posezení. Orientace do klidné části pozemku.",
     features: ["Terasa 25,8 m²", "Sklepní kója", "Parkovací místo", "Koupelna s WC"],
     photos: [1,2,3,4,5,6,7,8,9,10,11],
@@ -57,7 +57,7 @@ const localApartments = [
   },
   {
     id: 4, type: "3+kk", floor: "3. NP", floorNum: 3, area: 59.86, terrace: null,
-    tag: null, price: "7 999 999 Kč", status: "Volný",
+    tag: null, price: "7 480 000 Kč", status: "Volný",
     description: "Byt 3+kk ve třetím nadzemním podlaží se světlou dispozicí a výhledem do okolní zástavby. Tři oddělené místnosti poskytují dostatečný prostor pro rodinu. Součástí sklepní kója a parkovací místo.",
     features: ["Sklepní kója", "Parkovací místo", "Koupelna s WC", "Šatna"],
     photos: [1,2,3,4,5,6],
@@ -65,7 +65,7 @@ const localApartments = [
   },
   {
     id: 5, type: "1+kk", floor: "3. NP", floorNum: 3, area: 50.64, terrace: 8.12,
-    tag: "Terasa", price: "7 999 999 Kč", status: "Volný",
+    tag: "Terasa", price: "6 330 000 Kč", status: "Volný",
     description: "Byt 1+kk s terasou 8 m² ve třetím nadzemním podlaží. Díky vyšší poloze byt nabízí příjemnější výhledy než srovnatelné jednotky ve druhém patře. Kompaktní dispozice vhodná pro jednotlivce nebo pár.",
     features: ["Terasa 8 m²", "Sklepní kója", "Parkovací místo", "Koupelna s WC"],
     photos: [1,2,3,4,6,7,8,9,10,11,12],
@@ -73,7 +73,7 @@ const localApartments = [
   },
   {
     id: 6, type: "1+kk kompakt", floor: "3. NP", floorNum: 3, area: 28.23, terrace: null,
-    tag: "Investice", price: "7 999 999 Kč", status: "Volný",
+    tag: "Investice", price: "3 530 000 Kč", status: "Volný",
     description: "Kompaktní investiční jednotka 1+kk ve třetím nadzemním podlaží. Efektivně řešená dispozice na 28 m² — ideální pro krátkodobé nebo dlouhodobé pronájmy v centru Plzně. Výborný poměr ceny a výnosu.",
     features: ["Sklepní kója", "Parkovací místo", "Koupelna s WC", "Investiční potenciál"],
     photos: [],
@@ -81,7 +81,7 @@ const localApartments = [
   },
   {
     id: 7, type: "1+kk", floor: "4. NP", floorNum: 4, area: 29.53, terrace: null,
-    tag: null, price: "7 999 999 Kč", status: "Volný",
+    tag: null, price: "3 690 000 Kč", status: "Volný",
     description: "Byt 1+kk ve čtvrtém nadzemním podlaží s výhledem přes střechy okolní zástavby. Světlá místnost s kuchyňským koutem, koupelna a šatní prostor. Klidná poloha v nejvyšším podlaží budovy.",
     features: ["Sklepní kója", "Parkovací místo", "Koupelna s WC", "Nejvyšší podlaží"],
     photos: [],
@@ -89,7 +89,7 @@ const localApartments = [
   },
   {
     id: 8, type: "3+kk", floor: "4. NP", floorNum: 4, area: 100.38, terrace: 28.25,
-    tag: "Penthouse", price: "7 999 999 Kč", status: "Volný",
+    tag: "Penthouse", price: "12 550 000 Kč", status: "Volný",
     description: "Výjimečný penthouse 3+kk o rozloze 100 m² ve čtvrtém nadzemním podlaží. Dvě terasy s celkovou plochou 28 m², šatna, velkorysý obývací prostor a prémiové vybavení. Nejprestižnější jednotka celého projektu BD Jedlová.",
     features: ["Terasy 28 m²", "Šatna", "Sklepní kója", "Parkovací místo", "Koupelna + WC", "Prémiové podlaží"],
     photos: [],

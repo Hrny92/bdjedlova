@@ -28,7 +28,7 @@ const agents = [
   {
     name:  "Milada\nIndráková",
     title: "Realitní makléřka",
-    phone: "+420 XXX XXX XXX",   // ← doplň číslo
+    phone: "+420 606 064 961",
     email: "info@jedlova-plzen.cz",
     photo: "/images/milada.webp",
   },
