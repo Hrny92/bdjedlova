@@ -127,7 +127,7 @@ export default function BytyPage() {
 
               <div className="relative w-full overflow-hidden bg-cream">
                 <Image
-                  src="/images/budova-podlazi.webp"
+                  src="/images/vizualizace-nove/mapa.png"
                   alt="BD Jedlová — interaktivní mapa podlaží"
                   width={2400}
                   height={1792}

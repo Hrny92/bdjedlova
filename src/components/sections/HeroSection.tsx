@@ -158,7 +158,7 @@ export default function HeroSection() {
           <div className="divider mb-4 md:mb-8" />
           <p className="body-sm text-anthracite/60 max-w-[36ch] mb-6 md:mb-10 text-[0.82rem] md:text-[0.9rem]">
             BD Jedlová uzavírá historickou proluku v centru Plzně. Čtyři podlaží,
-            osm bytů, výrazná fasáda z tmavé lícové cihly a dřevěných lamel.
+            osm bytů, výrazná fasáda a dřevěné lamely.
             Architektura, která ví, kde stojí.
           </p>
           <button

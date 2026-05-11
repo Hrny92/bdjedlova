@@ -10,17 +10,16 @@ import { mainGalleryQuery } from "@/sanity/queries";
 
 // ── Lokální fallback obrázky ───────────────────────────────────────────────────
 const localImages = [
-  { src: "/images/gallery/exterier-1.webp", alt: "BD Jedlová — pohled z ulice" },
-  { src: "/images/gallery/exterier-2.webp", alt: "BD Jedlová — fasáda z tmavé lícové cihly" },
-  { src: "/images/gallery/exterier-3.webp", alt: "BD Jedlová — vstup a parkoviště" },
-  { src: "/images/gallery/interior-byt1.webp", alt: "BD Jedlová — interiér bytu 1" },
-  { src: "/images/gallery/exterier-4.webp", alt: "BD Jedlová — balkóny a dřevěné lamely" },
-  { src: "/images/gallery/exterier-5.webp", alt: "BD Jedlová — noční pohled" },
-  { src: "/images/gallery/interior-byt2.webp", alt: "BD Jedlová — interiér bytu 2" },
-  { src: "/images/gallery/exterier-6.webp", alt: "BD Jedlová — detail fasády" },
-  { src: "/images/gallery/exterier-7.webp", alt: "BD Jedlová — pohled ze dvora" },
-  { src: "/images/gallery/interior-byt3.webp", alt: "BD Jedlová — interiér bytu 3" },
-  { src: "/images/gallery/exterier-8.webp", alt: "BD Jedlová — celkový pohled" },
+  { src: "/images/vizualizace-nove/Ext 1 1.png", alt: "BD Jedlová — pohled z ulice" },
+  { src: "/images/vizualizace-nove/Ext 2 2.png", alt: "BD Jedlová — fasáda z tmavé lícové cihly" },
+  { src: "/images/vizualizace-nove/Ext 3 2.png", alt: "BD Jedlová — vstup a okolí" },
+  { src: "/images/gallery/interior-byt1.webp",   alt: "BD Jedlová — interiér bytu 1" },
+  { src: "/images/vizualizace-nove/Ext 4 2.png", alt: "BD Jedlová — balkóny a dřevěné lamely" },
+  { src: "/images/vizualizace-nove/Ext 5.png",   alt: "BD Jedlová — pohled z boku" },
+  { src: "/images/gallery/interior-byt2.webp",   alt: "BD Jedlová — interiér bytu 2" },
+  { src: "/images/vizualizace-nove/Ext 6.png",   alt: "BD Jedlová — detail fasády" },
+  { src: "/images/vizualizace-nove/Ext 7.png",   alt: "BD Jedlová — celkový pohled" },
+  { src: "/images/gallery/interior-byt3.webp",   alt: "BD Jedlová — interiér bytu 3" },
 ];
 
 type GalleryImage = { src: string; alt: string };
