@@ -10,16 +10,16 @@ import { mainGalleryQuery } from "@/sanity/queries";
 
 // ── Lokální fallback obrázky ───────────────────────────────────────────────────
 const localImages = [
-  { src: "/images/vizualizace-nove/Ext 1 1.png", alt: "BD Jedlová — pohled z ulice" },
-  { src: "/images/vizualizace-nove/Ext 2 2.png", alt: "BD Jedlová — fasáda z tmavé lícové cihly" },
-  { src: "/images/vizualizace-nove/Ext 3 2.png", alt: "BD Jedlová — vstup a okolí" },
-  { src: "/images/gallery/interior-byt1.webp",   alt: "BD Jedlová — interiér bytu 1" },
-  { src: "/images/vizualizace-nove/Ext 4 2.png", alt: "BD Jedlová — balkóny a dřevěné lamely" },
-  { src: "/images/vizualizace-nove/Ext 5.png",   alt: "BD Jedlová — pohled z boku" },
-  { src: "/images/gallery/interior-byt2.webp",   alt: "BD Jedlová — interiér bytu 2" },
-  { src: "/images/vizualizace-nove/Ext 6.png",   alt: "BD Jedlová — detail fasády" },
-  { src: "/images/vizualizace-nove/Ext 7.png",   alt: "BD Jedlová — celkový pohled" },
-  { src: "/images/gallery/interior-byt3.webp",   alt: "BD Jedlová — interiér bytu 3" },
+  { src: "/images/vizualizace-nove/Ext 1 1.webp", alt: "BD Jedlová — pohled z ulice" },
+  { src: "/images/vizualizace-nove/Ext 2 2.webp", alt: "BD Jedlová — fasáda z tmavé lícové cihly" },
+  { src: "/images/vizualizace-nove/Ext 3 2.webp", alt: "BD Jedlová — vstup a okolí" },
+  { src: "/images/gallery/interior-byt1.webp",    alt: "BD Jedlová — interiér bytu 1" },
+  { src: "/images/vizualizace-nove/Ext 4 2.webp", alt: "BD Jedlová — balkóny a dřevěné lamely" },
+  { src: "/images/vizualizace-nove/Ext 5.webp",   alt: "BD Jedlová — pohled z boku" },
+  { src: "/images/gallery/interior-byt2.webp",    alt: "BD Jedlová — interiér bytu 2" },
+  { src: "/images/vizualizace-nove/Ext 6.webp",   alt: "BD Jedlová — detail fasády" },
+  { src: "/images/vizualizace-nove/Ext 7.webp",   alt: "BD Jedlová — celkový pohled" },
+  { src: "/images/gallery/interior-byt3.webp",    alt: "BD Jedlová — interiér bytu 3" },
 ];
 
 type GalleryImage = { src: string; alt: string };

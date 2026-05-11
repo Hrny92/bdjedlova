@@ -44,7 +44,7 @@ export default function SEOSchema() {
       width: 280,
       height: 80,
     },
-    image: `${BASE_URL}/images/gallery/exterier-1.webp`,
+    image: `${BASE_URL}/images/vizualizace-nove/Ext 1 1.webp`,
     description:
       "BD Jedlová je prémiový bytový dům v centru Plzně s 8 bytovými jednotkami. Nabízíme byty 1+kk, 3+kk a penthouse s výhledem na centrum Plzně.",
     address: {
@@ -172,8 +172,8 @@ export default function SEOSchema() {
     numberOfAvailableAccommodationUnits: 8,
     tourBookingPage: `${BASE_URL}/#kontakt`,
     image: [
-      `${BASE_URL}/images/gallery/exterier-1.webp`,
-      `${BASE_URL}/images/gallery/exterier-2.webp`,
+      `${BASE_URL}/images/vizualizace-nove/Ext 1 1.webp`,
+      `${BASE_URL}/images/vizualizace-nove/Ext 2 2.webp`,
       `${BASE_URL}/images/gallery/interior-byt1.webp`,
     ],
   };
@@ -561,7 +561,7 @@ export default function SEOSchema() {
     description:
       "8 prémiových bytů k prodeji v novostavbě BD Jedlová v centru Plzně. Dispozice 1+kk (28–54 m²) a 3+kk (59–100 m²). Fasáda lícová cihla + dřevo. Parkovací místo a sklepní kója v ceně.",
     url: `${BASE_URL}/byty`,
-    image: `${BASE_URL}/images/gallery/exterier-1.webp`,
+    image: `${BASE_URL}/images/vizualizace-nove/Ext 1 1.webp`,
     datePosted: "2025-01-01",
     offers: {
       "@type": "AggregateOffer",

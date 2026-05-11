@@ -68,13 +68,13 @@ export const metadata: Metadata = {
       "Bytový dům Jedlová: 8 bytů (1+kk až penthouse 3+kk), 125 000 Kč/m², kryté parkování, terasy. Centrum Plzně. Kontakt: +420 723 117 023.",
     images: [
       {
-        url: "/images/gallery/exterier-1.webp",
+        url: "/images/vizualizace-nove/Ext 1 1.webp",
         width: 1200,
         height: 630,
         alt: "BD Jedlová — bytový dům v centru Plzně, fasáda z tmavé lícové cihly",
       },
       {
-        url: "/images/gallery/exterier-2.webp",
+        url: "/images/vizualizace-nove/Ext 2 2.webp",
         width: 1200,
         height: 800,
         alt: "BD Jedlová — pohled na fasádu z tmavé lícové cihly a dřevěných lamel",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "BD Jedlová — Prémiové bydlení v centru Plzně",
     description: "8 prémiových bytů od 3 530 000 Kč. Centrum Plzně. Lícová cihla, terasy, parkování.",
-    images: ["/images/gallery/exterier-1.webp"],
+    images: ["/images/vizualizace-nove/Ext 1 1.webp"],
   },
 
   robots: {
