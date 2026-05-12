@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | BD Jedlová Plzeň",
   },
   description:
-    "Bytový dům Jedlová — 8 prémiových bytů k prodeji v centru Plzně. Dispozice 1+kk až 3+kk penthouse. Ceny od 3 530 000 Kč (125 000 Kč/m²). Tmavá lícová cihla, terasy, kryté parkování. Kontakt: +420 723 117 023.",
+    "Bytový dům Jedlová — 8 prémiových bytů k prodeji v centru Plzně. Dispozice 1+kk až 3+kk penthouse. Ceny od 3 530 000 Kč (125 000 Kč/m²). Pohledový beton, terasy, kryté parkování. Kontakt: +420 723 117 023.",
 
   keywords: [
     "bytový dům Plzeň",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "byty novostavba Plzeň 2025",
     "investiční byt Plzeň",
     "bytový dům centrum Plzně",
-    "lícová cihla architektura Plzeň",
+    "pohledový beton architektura Plzeň",
     "cena bytu Plzeň centrum",
   ],
 
@@ -71,13 +71,13 @@ export const metadata: Metadata = {
         url: "/images/vizualizace-nove/Ext 1 1.webp",
         width: 1200,
         height: 630,
-        alt: "BD Jedlová — bytový dům v centru Plzně, fasáda z tmavé lícové cihly",
+        alt: "BD Jedlová — bytový dům v centru Plzně, fasáda z pohledového betonu",
       },
       {
         url: "/images/vizualizace-nove/Ext 2 2.webp",
         width: 1200,
         height: 800,
-        alt: "BD Jedlová — pohled na fasádu z tmavé lícové cihly a dřevěných lamel",
+        alt: "BD Jedlová — pohled na fasádu z pohledového betonu a dřevěných lamel",
       },
     ],
   },
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "BD Jedlová — Prémiové bydlení v centru Plzně",
-    description: "8 prémiových bytů od 3 530 000 Kč. Centrum Plzně. Lícová cihla, terasy, parkování.",
+    description: "8 prémiových bytů od 3 530 000 Kč. Centrum Plzně. Pohledový beton, terasy, parkování.",
     images: ["/images/vizualizace-nove/Ext 1 1.webp"],
   },
 

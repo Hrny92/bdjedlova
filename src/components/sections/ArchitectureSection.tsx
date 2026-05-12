@@ -8,30 +8,24 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const materials = [
   {
     id: "01",
-    name: "Tmavá lícová cihla",
-    desc: "Fasádní obklad s přirozenou texturou. Odolný, nadčasový, respektující historický kontext plzeňské zástavby.",
-    image: "/images/materialy/Cihla.webp",
+    name: "Pohledový beton",
+    desc: "Fasáda z pohledového betonu s přirozenou texturou. Odolný, nadčasový, respektující charakter plzeňské zástavby.",
+    image: "/images/materialy/Beton.webp",
   },
   {
     id: "02",
     name: "Dřevěné lamely",
-    desc: "Lamelové prvky na balkónech a lodžiích. Přirozené teplo v kontrastu s cihlou a betonem.",
+    desc: "Lamelové prvky na balkónech a lodžiích. Přirozené teplo v kontrastu s pohledovým betonem.",
     image: "/images/materialy/Drevo.webp",
   },
   {
     id: "03",
-    name: "Pohledový beton",
-    desc: "Viditelný na parkovišti a vstupních prvcích. Surovost jako záměrný designový prvek.",
-    image: "/images/materialy/Beton.webp",
-  },
-  {
-    id: "04",
     name: "Velkoformátová skla",
     desc: "Panoramatická okna maximalizující přísun denního světla do každého bytu.",
     image: "/images/materialy/Sklo-1.webp",
   },
   {
-    id: "05",
+    id: "04",
     name: "Intenzivní zeleň",
     desc: "Zelená střecha nad krytým parkingem. Živý prvek, který proměňuje technický prostor.",
     image: "/images/materialy/Zelen.webp",
@@ -96,8 +90,8 @@ export default function ArchitectureSection() {
           <div className="flex flex-col justify-center">
             <div className="divider mb-6" />
             <p className="body-sm text-anthracite/60 max-w-[64ch]">
-              Žádné efekty pro efekt. Fasáda z tmavé lícové cihly, lamelové dřevěné prvky
-              a pohledový beton — každý materiál tu má svůj důvod. Architektonický návrh
+              Žádné efekty pro efekt. Fasáda z pohledového betonu, lamelové dřevěné prvky
+              a velkoformátová skla — každý materiál tu má svůj důvod. Architektonický návrh
               zpracovalo studio Project Studio 8.
             </p>
           </div>

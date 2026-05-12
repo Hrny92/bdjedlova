@@ -20,7 +20,7 @@ export default function SEOSchema() {
     url: BASE_URL,
     name: "BD Jedlová — Prémiové bydlení v centru Plzně",
     description:
-      "Bytový dům Jedlová — 8 prémiových bytů v centru Plzně. Dispozice 1+kk až 3+kk penthouse. Fasáda z tmavé lícové cihly a dřevěných lamel. Cena od 3 530 000 Kč.",
+      "Bytový dům Jedlová — 8 prémiových bytů v centru Plzně. Dispozice 1+kk až 3+kk penthouse. Fasáda z pohledového betonu a dřevěných lamel. Cena od 3 530 000 Kč.",
     inLanguage: "cs-CZ",
     publisher: { "@id": `${BASE_URL}/#organization` },
     potentialAction: {
@@ -136,7 +136,7 @@ export default function SEOSchema() {
     "@id": `${BASE_URL}/#complex`,
     name: "BD Jedlová",
     description:
-      "Prémiový bytový dům v centru Plzně. Čtyři nadzemní podlaží, 8 bytových jednotek dispozic 1+kk, 3+kk a penthouse. Fasáda z tmavé lícové cihly a dřevěných lamelových prvků. Každý byt má sklepní kóji a parkovací místo v krytém parkovišti.",
+      "Prémiový bytový dům v centru Plzně. Čtyři nadzemní podlaží, 8 bytových jednotek dispozic 1+kk, 3+kk a penthouse. Fasáda z pohledového betonu a dřevěných lamelových prvků. Každý byt má sklepní kóji a parkovací místo v krytém parkovišti.",
     url: BASE_URL,
     address: {
       "@type": "PostalAddress",
@@ -166,7 +166,7 @@ export default function SEOSchema() {
       { "@type": "LocationFeatureSpecification", name: "Terasa", value: true },
       { "@type": "LocationFeatureSpecification", name: "Prémiové materiály", value: true },
       { "@type": "LocationFeatureSpecification", name: "Centrum města", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Tmavá lícová cihla", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Pohledový beton", value: true },
       { "@type": "LocationFeatureSpecification", name: "Dřevěné lamely", value: true },
     ],
     numberOfAvailableAccommodationUnits: 8,
@@ -411,7 +411,7 @@ export default function SEOSchema() {
         name: "Jaká je cena za metr čtvereční v BD Jedlová?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Cena za metr čtvereční v BD Jedlová je 125 000 Kč. Tato cena odpovídá prémiové novostavbě v centru Plzně s vysokým standardem provedení a architektonicky hodnotnou fasádou z tmavé lícové cihly.",
+          text: "Cena za metr čtvereční v BD Jedlová je 125 000 Kč. Tato cena odpovídá prémiové novostavbě v centru Plzně s vysokým standardem provedení a architektonicky hodnotnou fasádou z pohledového betonu.",
         },
       },
       {
@@ -443,7 +443,7 @@ export default function SEOSchema() {
         name: "Jaká je architektura a materiály použité v BD Jedlová?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "BD Jedlová se vyznačuje výraznou fasádou z tmavé lícové cihly doplněnou dřevěnými lamelovými prvky a prosklenými balkóny. Architektonický návrh pochází ze studia Project Studio 8. Dům uzavírá historickou proluku v centru Plzně a svým charakterem respektuje okolní zástavbu.",
+          text: "BD Jedlová se vyznačuje výraznou fasádou z pohledového betonu doplněnou dřevěnými lamelovými prvky a prosklenými balkóny. Architektonický návrh pochází ze studia Project Studio 8. Dům uzavírá historickou proluku v centru Plzně a svým charakterem respektuje okolní zástavbu.",
         },
       },
       {
@@ -507,7 +507,7 @@ export default function SEOSchema() {
         name: "Jaké novostavby bytů jsou k prodeji v centru Plzně?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "BD Jedlová je jednou z mála prémiových novostaveb přímo v historickém centru Plzně. Nabízí 8 bytových jednotek od 28 m² do 100 m² za ceny od 3 530 000 Kč. Jde o architektonicky hodnotnou stavbu s fasádou z tmavé lícové cihly — ojedinělý projekt v rámci plzeňského realitního trhu.",
+          text: "BD Jedlová je jednou z mála prémiových novostaveb přímo v historickém centru Plzně. Nabízí 8 bytových jednotek od 28 m² do 100 m² za ceny od 3 530 000 Kč. Jde o architektonicky hodnotnou stavbu s fasádou z pohledového betonu — ojedinělý projekt v rámci plzeňského realitního trhu.",
         },
       },
     ],
@@ -559,7 +559,7 @@ export default function SEOSchema() {
     "@type": "RealEstateListing",
     name: "Nabídka bytů — BD Jedlová, centrum Plzně",
     description:
-      "8 prémiových bytů k prodeji v novostavbě BD Jedlová v centru Plzně. Dispozice 1+kk (28–54 m²) a 3+kk (59–100 m²). Fasáda lícová cihla + dřevo. Parkovací místo a sklepní kója v ceně.",
+      "8 prémiových bytů k prodeji v novostavbě BD Jedlová v centru Plzně. Dispozice 1+kk (28–54 m²) a 3+kk (59–100 m²). Fasáda pohledový beton + dřevo. Parkovací místo a sklepní kója v ceně.",
     url: `${BASE_URL}/byty`,
     image: `${BASE_URL}/images/vizualizace-nove/Ext 1 1.webp`,
     datePosted: "2025-01-01",

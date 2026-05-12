@@ -11,7 +11,7 @@ import { mainGalleryQuery } from "@/sanity/queries";
 // ── Lokální fallback obrázky ───────────────────────────────────────────────────
 const localImages = [
   { src: "/images/vizualizace-nove/Ext 1 1.webp", alt: "BD Jedlová — pohled z ulice" },
-  { src: "/images/vizualizace-nove/Ext 2 2.webp", alt: "BD Jedlová — fasáda z tmavé lícové cihly" },
+  { src: "/images/vizualizace-nove/Ext 2 2.webp", alt: "BD Jedlová — fasáda z pohledového betonu" },
   { src: "/images/vizualizace-nove/Ext 3 2.webp", alt: "BD Jedlová — vstup a okolí" },
   { src: "/images/gallery/interior-byt1.webp",    alt: "BD Jedlová — interiér bytu 1" },
   { src: "/images/vizualizace-nove/Ext 4 2.webp", alt: "BD Jedlová — balkóny a dřevěné lamely" },
@@ -114,8 +114,8 @@ export default function GallerySection() {
             <div className="flex flex-col justify-center">
               <div className="divider mb-6" />
               <p className="body-sm text-anthracite/55 max-w-[64ch]">
-                Vizualizace zachycují výslednou podobu budovy — fasádu z tmavé lícové
-                cihly, dřevěné lamelové prvky a prostorné terasy s výhledem na centrum Plzně.
+                Vizualizace zachycují výslednou podobu budovy — fasádu z pohledového betonu,
+                dřevěné lamelové prvky a prostorné terasy s výhledem na centrum Plzně.
               </p>
             </div>
           </div>
