@@ -98,7 +98,7 @@ export default function ArchitectureSection() {
         </div>
 
         {/* Materiálové karty */}
-        <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-anthracite/10">
+        <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-anthracite/10">
           {materials.map((m) => (
             <div
               key={m.id}
