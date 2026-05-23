@@ -8,14 +8,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const materials = [
   {
     id: "01",
-    name: "Pohledový beton",
-    desc: "Fasáda z pohledového betonu s přirozenou texturou. Odolný, nadčasový, respektující charakter plzeňské zástavby.",
+    name: "Beton",
+    desc: "Fasáda z betonu s přirozenou texturou. Odolný, nadčasový, respektující charakter plzeňské zástavby.",
     image: "/images/materialy/Beton.webp",
   },
   {
     id: "02",
     name: "Dřevěné lamely",
-    desc: "Lamelové prvky na balkónech a lodžiích. Přirozené teplo v kontrastu s pohledovým betonem.",
+    desc: "Lamelové prvky na balkónech a lodžiích. Přirozené teplo v kontrastu s betonem.",
     image: "/images/materialy/Drevo.webp",
   },
   {
@@ -90,7 +90,7 @@ export default function ArchitectureSection() {
           <div className="flex flex-col justify-center">
             <div className="divider mb-6" />
             <p className="body-sm text-anthracite/60 max-w-[64ch]">
-              Žádné efekty pro efekt. Fasáda z pohledového betonu, lamelové dřevěné prvky
+              Žádné efekty pro efekt. Fasáda z betonu, lamelové dřevěné prvky
               a velkoformátová skla — každý materiál tu má svůj důvod. Architektonický návrh
               zpracovalo studio Project Studio 8.
             </p>
